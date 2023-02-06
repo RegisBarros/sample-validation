@@ -11,7 +11,7 @@ public class ValidationResult {
         return new ValidationResult(true, null);
     }
 
-    public static ValidationResult inValid(String errorMessage){
+    public static ValidationResult invalid(String errorMessage){
         return new ValidationResult(false, errorMessage);
     }
 
