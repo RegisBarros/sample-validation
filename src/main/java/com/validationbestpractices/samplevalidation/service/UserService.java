@@ -11,7 +11,7 @@ public class UserService {
     public User create(CreateUserCommand command) {
 
         var result = new Validator.CommandValidator<CreateUserCommand>()
-                .validate(command);
+                .verify(command);
 
         var user = new User(1, command.getName(), command.getBirthDate());
 

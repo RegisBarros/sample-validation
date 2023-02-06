@@ -9,7 +9,7 @@ public abstract class Validator {
     public static class CommandValidator<T> extends ValidationStep<T> {
 
         @Override
-        public ValidationResult validate(T command) {
+        public ValidationResult verify(T command) {
             try (ValidatorFactory validatorFactory = Validation.buildDefaultValidatorFactory()) {
                 final javax.validation.Validator validator = validatorFactory.getValidator();
                 final Set<ConstraintViolation<T>> constraintViolations = validator.validate(command);

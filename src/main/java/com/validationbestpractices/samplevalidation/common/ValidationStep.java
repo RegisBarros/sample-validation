@@ -18,13 +18,13 @@ public abstract class ValidationStep<T> {
         return this;
     }
 
-    public abstract ValidationResult validate(T toValidate);
+    public abstract ValidationResult verify(T toValidate);
 
     protected ValidationResult checkNext(T toValidate) {
         if (next == null) {
             return ValidationResult.valid();
         }
 
-        return next.validate(toValidate);
+        return next.verify(toValidate);
     }
 }
