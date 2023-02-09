@@ -1,7 +1,6 @@
 package com.validationbestpractices.samplevalidation.command;
 
 import com.validationbestpractices.samplevalidation.common.SelfValidating;
-import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.Value;
 
@@ -23,6 +22,5 @@ public class CreateUserCommand extends SelfValidating<CreateUserCommand> {
     public CreateUserCommand(String name, LocalDate birthDate) {
         this.name = name;
         this.birthDate = birthDate;
-        this.validateSelf();
     }
 }

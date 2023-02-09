@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     public User create(CreateUserCommand command) {
-
         var user = new User(1, command.getName(), command.getBirthDate());
 
         return user;
