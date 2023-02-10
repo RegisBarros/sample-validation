@@ -12,12 +12,14 @@ public class HttpResponseEntity {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy hh:mm:ss")
     private final LocalDateTime timestamp = LocalDateTime.now();
     private final HttpStatus status;
-    private final String message;
+    private final String title;
     private final String traceId;
+    private final String type;
 
-    public HttpResponseEntity(HttpStatus status, String message) {
+    public HttpResponseEntity(HttpStatus status, String message, String type) {
         this.status = status;
-        this.message = message;
+        this.title = message;
+        this.type = type;
         this.traceId = UUID.randomUUID().toString();
     }
 }

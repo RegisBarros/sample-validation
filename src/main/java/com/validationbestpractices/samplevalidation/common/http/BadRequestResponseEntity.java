@@ -15,7 +15,7 @@ public class BadRequestResponseEntity extends HttpResponseEntity{
     private final Map<String, List<String>> details;
 
     private BadRequestResponseEntity(@Nullable Map<String, List<String>> details) {
-        super(HttpStatus.BAD_REQUEST, DEFAULT_MESSAGE);
+        super(HttpStatus.BAD_REQUEST, DEFAULT_MESSAGE, "https://tools.ietf.org/html/rfc7231#section-6.5.1");
         this.details = details;
     }
 
