@@ -1,7 +1,6 @@
 package com.validationbestpractices.samplevalidation.controller;
 
 import com.validationbestpractices.samplevalidation.command.CreateUserCommand;
-import com.validationbestpractices.samplevalidation.exceptions.CustomException;
 import com.validationbestpractices.samplevalidation.model.User;
 import com.validationbestpractices.samplevalidation.service.UserService;
 import lombok.AllArgsConstructor;
